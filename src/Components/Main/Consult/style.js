@@ -7,8 +7,12 @@ const Wrapper = styled.div`
   padding-bottom: 100px;
   background: #ffeffd;
   height: 570px;
+  display: flex;
+  justify-content: center;
 `;
 const Container = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   align-items: center;
   gap: 36px;

@@ -1,5 +1,5 @@
 import styled from "styled-components";
-
+import { ReactComponent as Arrow } from "../../../Assets/Icons/Vector.svg";
 const Wrapper = styled.div`
   width: 100%;
   padding: var(--padding);
@@ -7,11 +7,15 @@ const Wrapper = styled.div`
   height: 443px;
 `;
 const Container = styled.div`
+  width: 100%;
+  max-width: 1440px;
   display: flex;
   justify-content: center;
+  margin: auto;
   flex-direction: column;
   gap: 36px;
   padding: 64px 0px;
+
   .title {
     font-family: "Inter";
     font-style: normal;
@@ -25,33 +29,7 @@ const Container = styled.div`
     color: #402c36;
   }
 `;
-const Content = styled.div`
-  width: 645px;
-  .maintitle {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 700;
-    font-size: 43px;
-    line-height: 52px;
 
-    /* Light/black */
-
-    color: #402c36;
-  }
-  .subtitle {
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 17px;
-    line-height: 130%;
-    /* or 22px */
-
-    /* Light/sec */
-
-    color: #c2b7bd;
-    margin: 38px 0px 24px 0px;
-  }
-`;
 const Button = styled.div`
   padding: 0px 14px;
   border-radius: 14px;
@@ -72,9 +50,45 @@ const Button = styled.div`
 `;
 
 const Card = styled.div`
-  width: 387px;
+  width: 386px;
   height: 224px;
   background-color: yellow;
   border-radius: 12px;
 `;
-export { Wrapper, Container, Content, Button, Card };
+
+const Arrows = styled.div``;
+
+const Carousel = styled.div`
+  position: relative;
+`;
+Arrows.Right = styled(Arrow)`
+  width: 44px;
+  height: 44px;
+  background: rgba(231, 40, 135, 0.1);
+  padding: 13px;
+  border-radius: 50%;
+  transform: rotate(90deg);
+  & path {
+    stroke: #e72887;
+  }
+  position: absolute;
+  z-index: 1;
+  top: 45%;
+  left: -45px;
+`;
+Arrows.Left = styled(Arrow)`
+  width: 44px;
+  height: 44px;
+  background: rgba(231, 40, 135, 0.1);
+  padding: 13px;
+  border-radius: 50%;
+  transform: rotate(270deg);
+  & path {
+    stroke: #e72887;
+  }
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 45%;
+`;
+export { Wrapper, Container, Button, Card, Arrows, Carousel };
