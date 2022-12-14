@@ -1,0 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;500;600;700&family=Nerko+One&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", sans-serif;
+  /* font-family: "Nerko One", cursive; */
+}
+:root {
+  --mainColor: #e72887;
+  --blackColor: #402c36;
+  --secondColor: #c2b7bd;
+  --padding: 0px 120px;
+}
