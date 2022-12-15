@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { ReactComponent as Arrow } from "../../Assets/Icons/Vector.svg";
+import { ReactComponent as Arrow } from "../../../Assets/Icons/Vector.svg";
 const Wrapper = styled.div`
   margin-top: 100px;
   width: 100%;
@@ -8,7 +8,11 @@ const Wrapper = styled.div`
   padding-bottom: 100px;
   background: var(--secondColor);
 `;
-const Container = styled.div``;
+const Container = styled.div`
+  width: 100%;
+  max-width: 1440px;
+  margin: auto;
+`;
 const Ftitle = styled.div`
   font-size: 37px;
   font-weight: 700;

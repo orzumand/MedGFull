@@ -2,13 +2,13 @@ import React, { useRef } from "react";
 import Slider from "react-slick";
 import { Arrows, Card, Carousel, Container, Wrapper } from "./style";
 const settings = {
-  // dots: true,
-  // infinite: true,
-  speed: 500,
-  slidesToShow: 3,
-  slidesToScroll: 1,
+  infinite: true,
   centerPadding: "19px",
-  center: true,
+
+  slidesToScroll: 1,
+  slidesToShow: 3,
+  speed: 500,
+  width: "100%",
 };
 const Service = () => {
   const slider = useRef();
@@ -17,20 +17,53 @@ const Service = () => {
       <Container>
         <div className={"title"}>Услуги</div>
         <Carousel>
-          <Arrows.Right onClick={() => slider.current.slickPrev()} />
           <Arrows.Left onClick={() => slider.current.slickNext()} />
-          <Slider ref={slider} {...settings}>
+          <Slider className="slider" ref={slider} {...settings}>
             <div>
-              <Card></Card>
+              <Card>
+                <div className="title">
+                  Вспомогательные репродуктивные техногонии
+                </div>
+                <div className="sibtitle">
+                  Педиатра, теравевта, невролога, аллерголога, гастроэнтеролога
+                  и других высококласных врачей
+                </div>
+              </Card>
             </div>
             <div>
-              <Card></Card>
+              <Card>
+                <div className="title">
+                  Вспомогательные репродуктивные техногонии
+                </div>
+                <div className="sibtitle">
+                  Педиатра, теравевта, невролога, аллерголога, гастроэнтеролога
+                  и других высококласных врачей
+                </div>
+              </Card>
             </div>
             <div>
-              <Card></Card>
+              <Card>
+                {" "}
+                <div className="title">
+                  Вспомогательные репродуктивные техногонии
+                </div>
+                <div className="sibtitle">
+                  Педиатра, теравевта, невролога, аллерголога, гастроэнтеролога
+                  и других высококласных врачей
+                </div>
+              </Card>
             </div>
             <div>
-              <Card></Card>
+              <Card>
+                {" "}
+                <div className="title">
+                  Вспомогательные репродуктивные техногонии
+                </div>
+                <div className="sibtitle">
+                  Педиатра, теравевта, невролога, аллерголога, гастроэнтеролога
+                  и других высококласных врачей
+                </div>
+              </Card>
             </div>
           </Slider>
         </Carousel>
