@@ -68,7 +68,7 @@ const Card = styled.div`
     color: #402c36;
     margin-bottom: 12px;
   }
-  .subtitle {
+  .sibtitle {
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;

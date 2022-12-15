@@ -32,7 +32,7 @@ const FAQ = () => {
             onClick={() => handleClick(btnState === 1 ? 0 : 1)}
           >
             <Question>
-              {btnState ? <Dote /> : ""}
+              {btnState === 1 ? <Dote /> : ""}
 
               <Title>
                 Каков порядок прохождения обследования? Нужна ли предварительная
@@ -55,7 +55,7 @@ const FAQ = () => {
             onClick={() => handleClick(btnState === 2 ? 0 : 2)}
           >
             <Question>
-              {btnState ? <Dote /> : ""}
+              {btnState === 2 ? <Dote /> : ""}
               <Title>
                 Как записаться к узкому специалисту в вашей клинике?
               </Title>
@@ -76,7 +76,7 @@ const FAQ = () => {
             onClick={() => handleClick(btnState === 3 ? 0 : 3)}
           >
             <Question>
-              {btnState ? <Dote /> : ""}
+              {btnState === 3 ? <Dote /> : ""}
               <Title>
                 Подскажите, есть ли при больнице платный стационар в
                 терапевтическом отделении? И, если есть, то как в него попасть?
@@ -98,7 +98,7 @@ const FAQ = () => {
             onClick={() => handleClick(btnState === 4 ? 0 : 4)}
           >
             <Question>
-              {btnState ? <Dote /> : ""}
+              {btnState === 4 ? <Dote /> : ""}
               <Title>
                 Как отменить прежнюю запись к врачу, если я выбрала другое
                 время?
