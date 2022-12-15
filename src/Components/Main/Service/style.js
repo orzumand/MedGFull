@@ -50,16 +50,52 @@ const Button = styled.div`
 `;
 
 const Card = styled.div`
-  width: 386px;
+  width: 390px;
   height: 224px;
-  background-color: yellow;
+  background-color: #ffff;
   border-radius: 12px;
+  padding: 26px;
+  padding-top: 51px;
+  .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 21px;
+    line-height: 25px;
+    width: 326px;
+    /* Light/black */
+
+    color: #402c36;
+    margin-bottom: 12px;
+  }
+  .subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 130%;
+    /* or 19px */
+
+    /* Light/sec */
+
+    color: #c2b7bd;
+  }
 `;
 
 const Arrows = styled.div``;
 
 const Carousel = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
   position: relative;
+  .slick-next {
+    display: none !important;
+  }
+  .slick-prev {
+    display: none !important;
+  }
 `;
 Arrows.Right = styled(Arrow)`
   width: 44px;
@@ -83,6 +119,7 @@ Arrows.Left = styled(Arrow)`
   padding: 13px;
   border-radius: 50%;
   transform: rotate(270deg);
+  cursor: pointer;
   & path {
     stroke: #e72887;
   }
@@ -90,5 +127,8 @@ Arrows.Left = styled(Arrow)`
   z-index: 1;
   right: 0;
   top: 45%;
+  :active {
+    background-color: #ffffff;
+  }
 `;
 export { Wrapper, Container, Button, Card, Arrows, Carousel };
