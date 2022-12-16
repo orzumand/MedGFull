@@ -1,6 +1,9 @@
 import React, { useRef } from "react";
 import Slider from "react-slick";
-import { Arrows, Card, Carousel, Container, Wrapper } from "./style";
+import Icon1 from "../../../Assets/Icons/Service1.svg";
+import Icon2 from "../../../Assets/Icons/Service2.svg";
+import Icon3 from "../../../Assets/Icons/Service3.svg";
+import { Arrows, Card, Carousel, Container, Icon, Wrapper } from "./style";
 const settings = {
   infinite: true,
   centerPadding: "19px",
@@ -21,6 +24,7 @@ const Service = () => {
           <Slider className="slider" ref={slider} {...settings}>
             <div>
               <Card>
+                <Icon src={Icon1} />
                 <div className="title">
                   Вспомогательные репродуктивные техногонии
                 </div>
@@ -32,6 +36,7 @@ const Service = () => {
             </div>
             <div>
               <Card>
+                <Icon src={Icon2} />
                 <div className="title">
                   Вспомогательные репродуктивные техногонии
                 </div>
@@ -43,7 +48,7 @@ const Service = () => {
             </div>
             <div>
               <Card>
-                {" "}
+                <Icon src={Icon3} />
                 <div className="title">
                   Вспомогательные репродуктивные техногонии
                 </div>
@@ -55,7 +60,7 @@ const Service = () => {
             </div>
             <div>
               <Card>
-                {" "}
+                <Icon src={Icon2} />
                 <div className="title">
                   Вспомогательные репродуктивные техногонии
                 </div>

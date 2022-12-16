@@ -13,8 +13,7 @@ const Navbar = () => {
             <div className="subtitle">контактный центр</div>
           </div>
           <Button>
-            <img src={Ru} alt="Logo" /> Русский
-          </Button>
+            <img src={Ru} alt="Logo" /> Русский</Button>
           <Button type={"first"}>Обратный звонок</Button>
         </Contacts>
       </Container>
