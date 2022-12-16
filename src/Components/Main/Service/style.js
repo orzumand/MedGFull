@@ -56,6 +56,7 @@ const Card = styled.div`
   border-radius: 12px;
   padding: 26px;
   padding-top: 51px;
+  position: relative;
   .title {
     font-family: "Inter";
     font-style: normal;
@@ -131,4 +132,10 @@ Arrows.Left = styled(Arrow)`
     background-color: #ffffff;
   }
 `;
-export { Wrapper, Container, Button, Card, Arrows, Carousel };
+const Icon = styled.img`
+  position: absolute;
+  right: 10px;
+  top: 0px;
+  flex: 1;
+`;
+export { Wrapper, Container, Button, Card, Arrows, Carousel, Icon };
