@@ -63,4 +63,5 @@ const Button = styled.div`
     transform: scale(0.98);
   }
 `;
+
 export { Wrapper, Container, Content, Button };

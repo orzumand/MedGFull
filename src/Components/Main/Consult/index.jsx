@@ -1,7 +1,7 @@
 import React from "react";
 import { Button, Container, Content, Wrapper } from "./style";
 import Nurse from "../../../Assets/Img/nurse.svg";
-const Consult = () => {
+const Consult = ({ handleToggle }) => {
   return (
     <Wrapper>
       <Container>
@@ -13,7 +13,7 @@ const Consult = () => {
             Педиатра, теравевта, невролога, аллерголога, гастроэнтеролога и
             других высококласных врачей
           </div>
-          <Button>Записаться онлайн</Button>
+          <Button onClick={() => handleToggle()}>Записаться онлайн</Button>
         </Content>
         <img src={Nurse} alt="IMG" />
       </Container>
