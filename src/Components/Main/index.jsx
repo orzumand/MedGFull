@@ -6,7 +6,7 @@ import Group from "./Group";
 import Partner from "./Partner";
 import Blog from "./Blog";
 import TakeControl from "./TakeControl";
-import { Body, Container, Form, Header, Icon, Input } from "./style";
+import { Body, Container, Form, Header, Icon, Input, Submit } from "./style";
 const Main = () => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
@@ -43,6 +43,7 @@ const Main = () => {
                   <Input placeholder="14:00" />
                 </div>
               </Body.Date>
+              <Submit>Подтвердить</Submit>
             </Body>
           </Container>
         </Form>

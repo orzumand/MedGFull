@@ -1,32 +1,34 @@
 import styled from "styled-components";
+import { ReactComponent as Close } from "../../Assets/Icons/Close.svg";
 const getType = ({ type }) => {
   switch (type) {
     case "first":
       return {
         background: "rgba(231, 40, 135, 0.1)",
         color: "#E72887",
-        padding:" 0px 14px"
+        padding: " 0px 14px",
       };
-      default:
-        return {
-          background: "#F8F8F8",
-          "font-weight": "500",
-          "font-size": " 13px",
-          "line-height": "16px",
-          "letter-spacing": "-0.3px",
-          color: "#273140",
-          padding:" 0px 10px"
+    default:
+      return {
+        background: "#F8F8F8",
+        "font-weight": "500",
+        "font-size": " 13px",
+        "line-height": "16px",
+        "letter-spacing": "-0.3px",
+        color: "#273140",
+        padding: " 0px 10px",
       };
   }
 };
 
 const Wrapper = styled.div`
   width: 100%;
+`;
+const NavbarWrapper = styled.div`
   padding: var(--padding);
-  display: flex;
-  justify-content: center;
 `;
 const Container = styled.div`
+  margin: auto;
   width: 100%;
   max-width: 1440px;
   height: 100px;
@@ -65,14 +67,13 @@ const Contacts = styled.div`
   align-items: center;
 `;
 const Button = styled.div`
-
   border-radius: 14px;
   font-weight: 500;
   font-size: 15px;
   display: flex;
   -moz-user-select: none;
--khtml-user-select: none;
-user-select: none;      
+  -khtml-user-select: none;
+  user-select: none;
   align-items: center;
 
   height: 47px;
@@ -82,9 +83,117 @@ user-select: none;
   :active {
     transform: scale(0.98);
   }
-  img{
-    width:28px;
+  img {
+    width: 28px;
     height: 28px;
   }
 `;
-export { Wrapper, Container, Contacts, Button };
+const Form = styled.div`
+  background-color: rgba(0, 0, 0, 0.522);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+`;
+const Con = styled.div`
+  width: 496px;
+  height: 368px;
+  background: #f8f8f8;
+  border-radius: 24px;
+`;
+
+const Header = styled.div`
+  padding: 0px 28px;
+  width: 100%;
+  height: 70px;
+  background-color: #ffffff;
+  border-top-left-radius: 24px;
+  border-top-right-radius: 24px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 23px;
+  line-height: 130%;
+  color: #402c36;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
+
+const Icon = styled(Close)`
+  cursor: pointer;
+  :active {
+    & path {
+      fill: #e72887;
+    }
+  }
+`;
+
+const Body = styled.div`
+  padding: 20px 28px 28px 28px;
+  .subtitle {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 100%;
+    color: #999999;
+    margin-bottom: 8px;
+  }
+`;
+
+Body.Date = styled.div`
+  display: flex;
+  gap: 12px;
+`;
+const Input = styled.input`
+  width: 100%;
+  height: 51px;
+  border-radius: 14px;
+  background-color: #ffffff;
+  border: none;
+  margin-bottom: 12px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  color: #1d1d1d;
+  padding: 0px 16px;
+  :focus {
+    outline: none;
+    outline: 2px solid #e72887;
+  }
+`;
+const Submit = styled.div`
+  height: 52px;
+  width: 100%;
+  background-color: #e72887;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  margin-top: 40px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.1s;
+  :hover {
+    margin-top: 38px;
+  }
+  :active {
+    margin-top: 42px;
+  }
+`;
+
+export { Form, Container, Header, Icon, Body, Input, Submit };
+export { Wrapper, Con, Contacts, Button, NavbarWrapper };

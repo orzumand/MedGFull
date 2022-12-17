@@ -1,13 +1,17 @@
 import React from "react";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Main from "../Components/Main";
-import Footer from "../Components/Main/Footer";
+
 import Navbar from "../Components/Navbar";
 const Root = () => {
   return (
     <div>
-      <Navbar />
-      <Main />
-      <Footer />
+      <Routes>
+        <Route element={<Navbar />}>
+          <Route path="/main" element={<Main />} />
+        </Route>
+        <Route path="/" element={<Navigate to="/main" />} />
+      </Routes>
     </div>
   );
 };

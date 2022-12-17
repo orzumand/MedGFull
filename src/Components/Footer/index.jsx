@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Content, Img, Wrapper } from "./style";
-import Logo from "../../../Assets/Logo.svg";
+import Logo from "../../Assets/Logo.svg";
 import { FaInstagram, FaTelegramPlane, FaTwitter } from "react-icons/fa";
 
 const Footer = () => {
