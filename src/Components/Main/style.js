@@ -80,4 +80,30 @@ const Input = styled.input`
     outline: 2px solid #e72887;
   }
 `;
-export { Form, Container, Header, Icon, Body, Input };
+const Submit = styled.div`
+  height: 52px;
+  width: 100%;
+  background-color: #e72887;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  text-align: center;
+  letter-spacing: -0.3px;
+  color: #ffffff;
+  margin-top: 40px;
+  border-radius: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: 0.1s;
+  :hover {
+    margin-top: 38px;
+  }
+  :active {
+    margin-top: 42px;
+  }
+`;
+export { Form, Container, Header, Icon, Body, Input, Submit };
