@@ -3,7 +3,6 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
   padding: var(--padding);
-
   height: 741px;
 `;
 const Container = styled.div`
@@ -41,8 +40,12 @@ const Content = styled.div`
   display: flex;
 `;
 const Left = styled.div`
-  flex: 1;
-
+  width: 590px;
+  border-radius: 24px;
+  cursor: pointer;
+  :hover {
+    box-shadow: -1px 1px 35px 11px rgba(34, 60, 80, 0.2);
+  }
   Img {
     height: 383px;
     width: 100%;
@@ -85,10 +88,14 @@ const Card = styled.div`
   gap: 20px;
   width: 100%;
   height: 120px;
-
+  border-radius: 20px;
+  cursor: pointer;
   Img {
     height: 120px;
     width: 183px;
+  }
+  :hover {
+    box-shadow: -1px 1px 35px 11px rgba(34, 60, 80, 0.2);
   }
 `;
 const CardTitle = styled.div`

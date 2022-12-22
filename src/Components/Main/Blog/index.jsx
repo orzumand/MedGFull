@@ -11,7 +11,7 @@ import {
   Wrapper,
 } from "./style";
 // import Partners from "../../../Assets/Img/Partner.svg";
-import Blogs from "../../../Assets/Img/Blog.svg";
+import Blogs from "../../../Assets/Img/Blog.jpg";
 const Blog = () => {
   return (
     <Wrapper>
