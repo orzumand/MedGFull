@@ -36,11 +36,11 @@ const Main = () => {
               <Body.Date>
                 <div>
                   <div className="subtitle">Дата</div>
-                  <Input placeholder="26 Сентября" />
+                  <Input type="date" placeholder="26 Сентября" />
                 </div>
                 <div>
                   <div className="subtitle">Время</div>
-                  <Input placeholder="14:00" />
+                  <Input type="time" placeholder="14:00" />
                 </div>
               </Body.Date>
               <Submit>Подтвердить</Submit>

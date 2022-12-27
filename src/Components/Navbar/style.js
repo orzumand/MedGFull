@@ -144,6 +144,10 @@ const Body = styled.div`
     color: #999999;
     margin-bottom: 8px;
   }
+  .disable {
+    background-color: #ffffff;
+    color: black;
+  }
 `;
 
 Body.Date = styled.div`
@@ -194,6 +198,39 @@ const Submit = styled.div`
     margin-top: 42px;
   }
 `;
+const PhoneInput = styled.div`
+  position: relative;
+  Input {
+    padding-left: 55px;
+  }
+`;
+PhoneInput.Code = styled.div`
+  position: absolute;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 100%;
+  /* identical to box height, or 15px */
 
-export { Form, Container, Header, Icon, Body, Input, Submit };
-export { Wrapper, Con, Contacts, Button, NavbarWrapper };
+  letter-spacing: -0.3px;
+
+  /* Text/main */
+
+  color: #273140;
+  top: 30%;
+  left: 15px;
+`;
+const ErrIcon = styled.img`
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  top: 30%;
+  right: 10px;
+`;
+const NameInput = styled.div`
+  position: relative;
+`;
+
+export { Form, Container, Header, Icon, Body, Input, Submit, PhoneInput };
+export { Wrapper, Con, Contacts, Button, NavbarWrapper, NameInput, ErrIcon };
