@@ -2,8 +2,10 @@ import React from "react";
 import { Button, Container, Content, Wrapper } from "./style";
 import Nurse from "../../../Assets/Img/nurse.svg";
 const Consult = ({ handleToggle }) => {
+  const mode = JSON.parse(localStorage.getItem("mode"));
+
   return (
-    <Wrapper>
+    <Wrapper mode={mode ? 1 : 0}>
       <Container>
         <Content>
           <div className="maintitle">

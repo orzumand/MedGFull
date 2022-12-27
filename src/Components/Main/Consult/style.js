@@ -9,6 +9,7 @@ const Wrapper = styled.div`
   height: 570px;
   display: flex;
   justify-content: center;
+  ${({ mode }) => mode && "background: #1D1D1D;"}
 `;
 const Container = styled.div`
   width: 100%;
