@@ -26,6 +26,7 @@ const Wrapper = styled.div`
 `;
 const NavbarWrapper = styled.div`
   padding: var(--padding);
+  ${({ mode }) => mode && "background-color: #323232"}
 `;
 const Container = styled.div`
   margin: auto;
@@ -87,6 +88,7 @@ const Button = styled.div`
     width: 28px;
     height: 28px;
   }
+  ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
 `;
 const Form = styled.div`
   background-color: rgba(0, 0, 0, 0.522);
@@ -231,6 +233,10 @@ const ErrIcon = styled.img`
 const NameInput = styled.div`
   position: relative;
 `;
-
-export { Form, Container, Header, Icon, Body, Input, Submit, PhoneInput };
+const Mode = styled.img`
+  width: 30px;
+  cursor: pointer;
+  margin-right: -50px;
+`;
+export { Form, Mode, Container, Header, Icon, Body, Input, Submit, PhoneInput };
 export { Wrapper, Con, Contacts, Button, NavbarWrapper, NameInput, ErrIcon };

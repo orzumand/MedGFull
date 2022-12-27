@@ -15,12 +15,15 @@ import {
   PhoneInput,
   NameInput,
   ErrIcon,
+  Mode,
 } from "./style";
 import Logo from "../../Assets/Img/Logo.svg";
 import Ru from "../../Assets/Icons/ru.svg";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import Remove from "../../Assets/Icons/remove.png";
+import Dark from "../../Assets/Icons/dark.png";
+import Light from "../../Assets/Icons/light.png";
 
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
@@ -28,11 +31,18 @@ const Navbar = () => {
   const [name, setName] = useState("");
   const [errorname, setErrorname] = useState(true);
   const [errortel, setErrortel] = useState(true);
-
+  const [mode, setMode] = useState(0);
   const onSubmit = () => {
     name === "" ? setErrorname(false) : setErrorname(true);
     tel.length !== 9 ? setErrortel(false) : setErrortel(true);
   };
+
+  const toggleMode = () => {
+    setMode(!mode);
+    localStorage.setItem("mode", mode);
+  };
+
+  const darkmode = JSON.parse(localStorage.getItem("mode"));
 
   const form = (
     <Form>
@@ -79,7 +89,7 @@ const Navbar = () => {
   );
   return (
     <Wrapper>
-      <NavbarWrapper>
+      <NavbarWrapper mode={darkmode ? 1 : 0}>
         <Container>
           <img src={Logo} alt="Logo" />
           <Contacts>
@@ -87,12 +97,17 @@ const Navbar = () => {
               <div className="title">+998 (97) 123-45-67</div>
               <div className="subtitle">контактный центр</div>
             </div>
-            <Button>
+            <Button mode={darkmode ? 1 : 0}>
               <img src={Ru} alt="Logo" /> Русский
             </Button>
-            <Button onClick={() => setToggle(true)} type={"first"}>
+            <Button
+              mode={darkmode ? 1 : 0}
+              onClick={() => setToggle(true)}
+              type={"first"}
+            >
               Обратный звонок
             </Button>
+            <Mode onClick={() => toggleMode()} src={!darkmode ? Dark : Light} />
           </Contacts>
         </Container>
       </NavbarWrapper>
