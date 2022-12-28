@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
 import {
   Body,
   Button,
@@ -24,14 +24,14 @@ import Footer from "../Footer";
 import Remove from "../../Assets/Icons/remove.png";
 import Dark from "../../Assets/Icons/dark.png";
 import Light from "../../Assets/Icons/light.png";
-
+import { DMode } from "../../Context/context";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [tel, setTel] = useState("");
   const [name, setName] = useState("");
   const [errorname, setErrorname] = useState(true);
   const [errortel, setErrortel] = useState(true);
-  const [mode, setMode] = useState(0);
+  const [mode, setMode] = useContext(DMode);
   const onSubmit = () => {
     name === "" ? setErrorname(false) : setErrorname(true);
     tel.length !== 9 ? setErrortel(false) : setErrortel(true);
