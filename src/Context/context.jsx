@@ -2,7 +2,9 @@ import React, { createContext, useState } from "react";
 
 export const DMode = createContext();
 const DarkMode = ({ children }) => {
-  const [mode, setMode] = useState(true);
+  const darkmode = JSON.parse(localStorage.getItem("mode"));
+
+  const [mode, setMode] = useState(darkmode !== null ? !darkmode : true);
   return <DMode.Provider value={[mode, setMode]}>{children}</DMode.Provider>;
 };
 

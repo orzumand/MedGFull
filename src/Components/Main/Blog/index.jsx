@@ -1,5 +1,4 @@
-import React from "react";
-
+import React, { useContext } from "react";
 import {
   Card,
   CardTitle,
@@ -10,15 +9,17 @@ import {
   Right,
   Wrapper,
 } from "./style";
-// import Partners from "../../../Assets/Img/Partner.svg";
+import { DMode } from "../../../Context/context";
 import Blogs from "../../../Assets/Img/Blog.jpg";
 const Blog = () => {
+  const [darkmode] = useContext(DMode);
+  const mode = darkmode ? 1 : 0;
   return (
-    <Wrapper>
-      <Container>
+    <Wrapper mode={mode}>
+      <Container mode={mode}>
         <div className="title">Блог о здоровье</div>
         <Content>
-          <Left>
+          <Left mode={mode}>
             <Img src={Blogs} />
             <div className="title">
               Стома: уход, калоприемники и их использование, диета, полезные
@@ -33,7 +34,7 @@ const Blog = () => {
           <Right>
             <Card>
               <Img src={Blogs} />
-              <CardTitle>
+              <CardTitle mode={mode}>
                 <div className="title">
                   Стома: уход, калоприемники и их использование, диета, полезные
                 </div>
@@ -46,7 +47,7 @@ const Blog = () => {
             </Card>
             <Card>
               <Img src={Blogs} />
-              <CardTitle>
+              <CardTitle mode={mode}>
                 <div className="title">
                   Стома: уход, калоприемники и их использование, диета, полезные
                 </div>
@@ -59,7 +60,7 @@ const Blog = () => {
             </Card>
             <Card>
               <Img src={Blogs} />
-              <CardTitle>
+              <CardTitle mode={mode}>
                 <div className="title">
                   Стома: уход, калоприемники и их использование, диета, полезные
                 </div>
@@ -72,7 +73,7 @@ const Blog = () => {
             </Card>
             <Card>
               <Img src={Blogs} />
-              <CardTitle>
+              <CardTitle mode={mode}>
                 <div className="title">
                   Стома: уход, калоприемники и их использование, диета, полезные
                 </div>

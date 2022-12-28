@@ -30,6 +30,7 @@ const Content = styled.div`
 
     /* Light/black */
     color: #402c36;
+    ${({ mode }) => mode && "color: #ffffff;"}
   }
   .subtitle {
     font-family: "Inter";
@@ -43,8 +44,8 @@ const Content = styled.div`
 
     color: #c2b7bd;
     margin: 38px 0px 24px 0px;
+    ${({ mode }) => mode && "color: ##C2B7BD;"}
   }
-  ${({ mode }) => mode && "color: #ffffff;"}
 `;
 const Button = styled.div`
   padding: 0px 14px;
