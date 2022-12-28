@@ -3,8 +3,8 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
   padding: var(--padding);
-
   height: 313px;
+  ${({ mode }) => mode && "background:#1D1D1D;"}
 `;
 const Container = styled.div`
   width: 100%;
@@ -27,6 +27,7 @@ const Container = styled.div`
     /* Light/black */
 
     color: #402c36;
+    ${({ mode }) => mode && "color:#ffffff;"}
   }
 `;
 

@@ -3,14 +3,12 @@ import { Button, Container, Content, Wrapper } from "./style";
 import Nurse from "../../../Assets/Img/nurse.svg";
 import { DMode } from "../../../Context/context";
 const Consult = ({ handleToggle }) => {
-  const [mode] = useContext(DMode);
-  console.log(mode);
-  const darkmode = JSON.parse(localStorage.getItem("mode"));
-
+  const [darkmode] = useContext(DMode);
+  const mode = darkmode ? 1 : 0;
   return (
-    <Wrapper mode={darkmode ? 1 : 0}>
+    <Wrapper mode={mode}>
       <Container>
-        <Content>
+        <Content mode={mode}>
           <div className="maintitle">
             Консультация врача в любое время и в любом месте по звонку
           </div>

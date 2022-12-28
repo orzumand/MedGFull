@@ -1,7 +1,8 @@
-import React, { useRef } from "react";
+import React, { useContext, useRef } from "react";
 import Slider from "react-slick";
 import { Arrows, Card, Carousel, Container, Img, Wrapper } from "./style";
 import User from "../../../Assets/Img/User1.svg";
+import { DMode } from "../../../Context/context";
 const settings = {
   infinite: true,
   centerPadding: "19px",
@@ -11,16 +12,18 @@ const settings = {
   width: "100%",
 };
 const Group = () => {
+  const [darkmode] = useContext(DMode);
+  const mode = darkmode ? 1 : 0;
   const slider = useRef();
   return (
-    <Wrapper>
-      <Container>
+    <Wrapper mode={mode}>
+      <Container mode={mode}>
         <div className={"title"}>Наша команда</div>
         <Carousel>
           <Arrows.Left onClick={() => slider.current.slickNext()} />
           <Slider className="slider" ref={slider} {...settings}>
             <div>
-              <Card>
+              <Card mode={mode}>
                 <Img src={User} />
                 <div className="title">Алявия Феруза Анварбековна</div>
                 <div className="subtitle">
@@ -29,7 +32,7 @@ const Group = () => {
               </Card>
             </div>
             <div>
-              <Card>
+              <Card mode={mode}>
                 <Img src={User} />
                 <div className="title">Алявия Феруза Анварбековна</div>
                 <div className="subtitle">
@@ -38,7 +41,7 @@ const Group = () => {
               </Card>
             </div>
             <div>
-              <Card>
+              <Card mode={mode}>
                 <Img src={User} />
                 <div className="title">Алявия Феруза Анварбековна</div>
                 <div className="subtitle">
@@ -47,7 +50,7 @@ const Group = () => {
               </Card>
             </div>
             <div>
-              <Card>
+              <Card mode={mode}>
                 <Img src={User} />
                 <div className="title">Алявия Феруза Анварбековна</div>
                 <div className="subtitle">
@@ -56,7 +59,7 @@ const Group = () => {
               </Card>
             </div>
             <div>
-              <Card>
+              <Card mode={mode}>
                 <Img src={User} />
                 <div className="title">Алявия Феруза Анварбековна</div>
                 <div className="subtitle">

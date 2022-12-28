@@ -31,18 +31,18 @@ const Navbar = () => {
   const [name, setName] = useState("");
   const [errorname, setErrorname] = useState(true);
   const [errortel, setErrortel] = useState(true);
-  const [mode, setMode] = useContext(DMode);
+
   const onSubmit = () => {
     name === "" ? setErrorname(false) : setErrorname(true);
     tel.length !== 9 ? setErrortel(false) : setErrortel(true);
   };
 
+  const [mode, setMode] = useContext(DMode);
+
   const toggleMode = () => {
     setMode(!mode);
     localStorage.setItem("mode", mode);
   };
-
-  const darkmode = JSON.parse(localStorage.getItem("mode"));
 
   const form = (
     <Form>
@@ -89,7 +89,7 @@ const Navbar = () => {
   );
   return (
     <Wrapper>
-      <NavbarWrapper mode={darkmode ? 1 : 0}>
+      <NavbarWrapper mode={mode ? 1 : 0}>
         <Container>
           <img src={Logo} alt="Logo" />
           <Contacts>
@@ -97,17 +97,17 @@ const Navbar = () => {
               <div className="title">+998 (97) 123-45-67</div>
               <div className="subtitle">контактный центр</div>
             </div>
-            <Button mode={darkmode ? 1 : 0}>
+            <Button mode={mode ? 1 : 0}>
               <img src={Ru} alt="Logo" /> Русский
             </Button>
             <Button
-              mode={darkmode ? 1 : 0}
+              mode={mode ? 1 : 0}
               onClick={() => setToggle(true)}
               type={"first"}
             >
               Обратный звонок
             </Button>
-            <Mode onClick={() => toggleMode()} src={!darkmode ? Dark : Light} />
+            <Mode onClick={() => toggleMode()} src={!mode ? Dark : Light} />
           </Contacts>
         </Container>
       </NavbarWrapper>

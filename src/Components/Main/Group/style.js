@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   padding: var(--padding);
   background: #f8f8f8;
   height: 500px;
+  ${({ mode }) => mode && "background:#323232"}
 `;
 const Container = styled.div`
   width: 100%;
@@ -27,6 +28,7 @@ const Container = styled.div`
     /* Light/black */
 
     color: #402c36;
+    ${({ mode }) => mode && "color:#ffffff"}
   }
 `;
 
@@ -69,6 +71,7 @@ const Card = styled.div`
     /* Light/black */
 
     color: #402c36;
+    ${({ mode }) => mode && "color:#ffffff"}
   }
   .subtitle {
     font-family: "Inter";
@@ -80,7 +83,9 @@ const Card = styled.div`
     text-align: center;
     padding: 0px 20px;
     color: #c2b7bd;
+    ${({ mode }) => mode && "color:#C2B7BD"}
   }
+  ${({ mode }) => mode && "background:#454545"}
 `;
 const Img = styled.img`
   width: 285px;
