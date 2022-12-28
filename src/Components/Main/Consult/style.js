@@ -29,7 +29,6 @@ const Content = styled.div`
     line-height: 52px;
 
     /* Light/black */
-
     color: #402c36;
   }
   .subtitle {
@@ -45,6 +44,7 @@ const Content = styled.div`
     color: #c2b7bd;
     margin: 38px 0px 24px 0px;
   }
+  ${({ mode }) => mode && "color: #ffffff;"}
 `;
 const Button = styled.div`
   padding: 0px 14px;

@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Button, Container, Content, Wrapper } from "./style";
 import Nurse from "../../../Assets/Img/nurse.svg";
+import { DMode } from "../../../Context/context";
 const Consult = ({ handleToggle }) => {
-  const mode = JSON.parse(localStorage.getItem("mode"));
+  const [mode] = useContext(DMode);
+  console.log(mode);
+  const darkmode = JSON.parse(localStorage.getItem("mode"));
 
   return (
-    <Wrapper mode={mode ? 1 : 0}>
+    <Wrapper mode={darkmode ? 1 : 0}>
       <Container>
         <Content>
           <div className="maintitle">
