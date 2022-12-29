@@ -1,12 +1,12 @@
 import styled from "styled-components";
 import { ReactComponent as Arrow } from "../../../Assets/Icons/Vector.svg";
 const Wrapper = styled.div`
-  margin-top: 100px;
   width: 100%;
   padding: var(--padding);
-  padding-top: 64px;
+  padding-top: 164px;
   padding-bottom: 100px;
   background: var(--secondColor);
+  ${({ mode }) => mode && "background:#323232;"}
 `;
 const Container = styled.div`
   width: 100%;
@@ -20,6 +20,7 @@ const Ftitle = styled.div`
   letter-spacing: 0em;
   text-align: left;
   padding-bottom: 8px;
+  ${({ mode }) => mode && "color:#ffffff;"}
 `;
 const Subtitle = styled.a`
   color: #999999;
@@ -27,13 +28,13 @@ const Subtitle = styled.a`
   font-size: 15px;
   text-decoration: none;
   cursor: pointer;
+  ${({ mode }) => mode && "color:#ffffff;"}
 `;
 
 const Akkardion = styled.div`
   margin-top: 20px;
   .active {
     height: 162px;
-    color: #e72887;
     transition: 0.2s;
     font-weight: 700;
   }
@@ -46,7 +47,6 @@ const Item = styled.div`
   margin-bottom: 10px;
   padding: 13px 18px;
   overflow: hidden;
-
   cursor: pointer;
 
   transition: 0.2s;
@@ -54,10 +54,13 @@ const Item = styled.div`
     transform: rotate(180deg);
     background: rgba(231, 40, 135, 0.15);
     height: 31px;
+    ${({ mode }) => mode && "background:#fafafa;"}
     & path {
       stroke: #e72887;
+      ${({ mode }) => mode && "stroke:black;"}
     }
   }
+  ${({ mode }) => mode && "background:#454545;"}
 `;
 
 const Title = styled.div`
@@ -71,6 +74,10 @@ const Icon = styled(Arrow)`
   border-radius: 50%;
   background: var(--secondColor);
   transition: 0.2s;
+  ${({ mode }) => mode && "background:#585858;"}
+  & path {
+    ${({ mode }) => mode && "stroke:#ffffff;"}
+  }
 `;
 const Question = styled.div`
   display: flex;
@@ -78,6 +85,7 @@ const Question = styled.div`
   width: 100%;
   align-items: center;
   position: relative;
+  ${({ mode }) => mode && "color:white;"}
 `;
 
 const Answer = styled.div`
@@ -86,6 +94,7 @@ const Answer = styled.div`
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
+  ${({ mode }) => mode && "color:white;"}
 `;
 
 const Dote = styled.div`

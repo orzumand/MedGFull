@@ -46,16 +46,17 @@ const Navbar = () => {
 
   const form = (
     <Form>
-      <Con>
-        <Header>
+      <Con mode={mode}>
+        <Header mode={mode}>
           <div>Обратный звонок</div>
-          <Icon onClick={() => setToggle(false)} />
+          <Icon mode={mode} onClick={() => setToggle(false)} />
         </Header>
-        <Body>
+        <Body mode={mode}>
           <form>
             <div className="subtitle">ФИО</div>
             <NameInput>
               <Input
+                mode={mode}
                 onChange={({ target: { value } }) => setName(value)}
                 name="name"
                 type="text"
@@ -65,8 +66,9 @@ const Navbar = () => {
             </NameInput>
             <div className="subtitle">Телефон</div>
             <PhoneInput>
-              <PhoneInput.Code>+998</PhoneInput.Code>
+              <PhoneInput.Code mode={mode}>+998</PhoneInput.Code>
               <Input
+                mode={mode}
                 name="tel"
                 type="tel"
                 placeholder="(97) 123-45-67"

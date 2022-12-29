@@ -108,21 +108,7 @@ const Carousel = styled.div`
     display: none !important;
   }
 `;
-Arrows.Right = styled(Arrow)`
-  width: 44px;
-  height: 44px;
-  background: rgba(231, 40, 135, 0.1);
-  padding: 13px;
-  border-radius: 50%;
-  transform: rotate(90deg);
-  & path {
-    stroke: #e72887;
-  }
-  position: absolute;
-  z-index: 1;
-  top: 45%;
-  left: -45px;
-`;
+
 Arrows.Left = styled(Arrow)`
   width: 44px;
   height: 44px;
@@ -133,6 +119,7 @@ Arrows.Left = styled(Arrow)`
   cursor: pointer;
   & path {
     stroke: #e72887;
+    ${({ mode }) => mode && " stroke: #ffffff;"}
   }
   position: absolute;
   z-index: 1;
@@ -140,6 +127,8 @@ Arrows.Left = styled(Arrow)`
   top: 45%;
   :active {
     background-color: #ffffff;
+    ${({ mode }) => mode && " background: #C8126D;"}
   }
+  ${({ mode }) => mode && "background:#585858;"}
 `;
 export { Wrapper, Img, Container, Button, Card, Arrows, Carousel };

@@ -17,6 +17,7 @@ const Container = styled.div`
   height: 452px;
   background: #f8f8f8;
   border-radius: 24px;
+  ${({ mode }) => mode && "background:#323232;"}
 `;
 
 const Header = styled.div`
@@ -35,10 +36,14 @@ const Header = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  ${({ mode }) => mode && "background:#454545;color:#ffffff;"}
 `;
 
 const Icon = styled(Close)`
   cursor: pointer;
+  & path {
+    ${({ mode }) => mode && "fill:#ffffff;"}
+  }
   :active {
     & path {
       fill: #e72887;
@@ -55,6 +60,7 @@ const Body = styled.div`
     line-height: 100%;
     color: #999999;
     margin-bottom: 8px;
+    ${({ mode }) => mode && "color:#999999;"}
   }
 `;
 
@@ -78,6 +84,21 @@ const Input = styled.input`
   :focus {
     outline: none;
     outline: 2px solid #e72887;
+  }
+  ${({ mode }) => mode && "background:#454545;color:#ffffff;"}
+  ::placeholder {
+    opacity: 0.8;
+    ${({ mode }) => mode && "color:#ffffff;"}
+  }
+
+  :-ms-input-placeholder {
+    opacity: 0.8;
+    ${({ mode }) => mode && "color:#ffffff;"}
+  }
+
+  ::-ms-input-placeholder {
+    opacity: 0.8;
+    ${({ mode }) => mode && "color:#ffffff;"}
   }
 `;
 const Submit = styled.div`
