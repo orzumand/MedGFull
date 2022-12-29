@@ -1,13 +1,16 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Container, Content, Img, Wrapper } from "./style";
 import Phone from "../../../Assets/Img/Phone.svg";
+import { DMode } from "../../../Context/context";
 
 const TakeControl = () => {
+  const [darkmode] = useContext(DMode);
+  const mode = darkmode ? 1 : 0;
   return (
-    <Wrapper>
-      <Container>
+    <Wrapper mode={mode}>
+      <Container mode={mode}>
         <div className="title">Возьмите под контроль свое здоровье</div>
-        <Content>
+        <Content mode={mode}>
           <div className="title">Быстрый и осторожный опыт</div>
           <div className="subtitle">
             Прием в Мелио длится всего 15 минут и проводится с экспертом,

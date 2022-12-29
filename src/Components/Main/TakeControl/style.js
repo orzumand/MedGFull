@@ -3,8 +3,8 @@ import styled from "styled-components";
 const Wrapper = styled.div`
   width: 100%;
   padding: var(--padding);
-
   height: 400px;
+  ${({ mode }) => mode && "background:#252424;"}
 `;
 const Container = styled.div`
   width: 100%;
@@ -27,6 +27,7 @@ const Container = styled.div`
     /* Light/black */
 
     color: #402c36;
+    ${({ mode }) => mode && "color:#ffffff;"}
   }
 `;
 
@@ -50,6 +51,7 @@ const Content = styled.div`
 
     color: #000000;
     margin-bottom: 4px;
+    ${({ mode }) => mode && "color:#ffffff;"}
   }
   .subtitle {
     font-family: "Inter";
@@ -60,6 +62,7 @@ const Content = styled.div`
 
     color: #8c8b8b;
     margin-bottom: 16px;
+    ${({ mode }) => mode && "color:##8C8B8B;"}
   }
 `;
 export { Wrapper, Img, Container, Content };

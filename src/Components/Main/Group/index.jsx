@@ -20,7 +20,7 @@ const Group = () => {
       <Container mode={mode}>
         <div className={"title"}>Наша команда</div>
         <Carousel>
-          <Arrows.Left onClick={() => slider.current.slickNext()} />
+          <Arrows.Left mode={mode} onClick={() => slider.current.slickNext()} />
           <Slider className="slider" ref={slider} {...settings}>
             <div>
               <Card mode={mode}>
