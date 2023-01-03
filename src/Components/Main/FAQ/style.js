@@ -54,11 +54,10 @@ const Item = styled.div`
     transform: rotate(180deg);
     background: rgba(231, 40, 135, 0.15);
     height: 31px;
-    ${({ mode }) => mode && "background:#fafafa;"}
     & path {
       stroke: #e72887;
-      ${({ mode }) => mode && "stroke:black;"}
     }
+    ${({ mode }) => mode && "background:#fafafa;"}
   }
   ${({ mode }) => mode && "background:#454545;"}
 `;
@@ -75,9 +74,6 @@ const Icon = styled(Arrow)`
   background: var(--secondColor);
   transition: 0.2s;
   ${({ mode }) => mode && "background:#585858;"}
-  & path {
-    ${({ mode }) => mode && "stroke:#ffffff;"}
-  }
 `;
 const Question = styled.div`
   display: flex;
