@@ -26,16 +26,34 @@ const Wrapper = styled.div`
 `;
 const NavbarWrapper = styled.div`
   padding: var(--padding);
+
+  @media (max-width: 1000px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 5px;
+  }
   ${({ mode }) => mode && "background-color: #323232"}
 `;
 const Container = styled.div`
-  margin: auto;
   width: 100%;
   max-width: 1440px;
   height: 100px;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media (max-width: 760px) {
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .Mobi {
+    display: none;
+    @media (max-width: 760px) {
+      display: flex;
+    }
+  }
 `;
 
 const Contacts = styled.div`
@@ -66,6 +84,38 @@ const Contacts = styled.div`
   display: flex;
   gap: 20px;
   align-items: center;
+  @media (max-width: 760px) {
+    display: none;
+  }
+`;
+const MobileContacts = styled.div`
+  .title {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 12px;
+    line-height: 19px;
+    text-align: right;
+
+    /* Light/main */
+
+    color: #e72887;
+  }
+  .subtitle {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 17px;
+    /* identical to box height */
+
+    text-align: right;
+
+    color: #bcbcbc;
+  }
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
 `;
 const Button = styled.div`
   border-radius: 14px;
@@ -89,6 +139,13 @@ const Button = styled.div`
     height: 28px;
   }
   ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
+  @media (max-width: 760px) {
+    font-size: 12px;
+    padding: 8px;
+    height: fit-content;
+    border-radius: 14px;
+    background: #f8f8f8;
+  }
 `;
 const Form = styled.div`
   background-color: rgba(0, 0, 0, 0.522);
@@ -259,6 +316,21 @@ const Mode = styled.img`
   width: 30px;
   cursor: pointer;
   margin-right: -50px;
+  @media (max-width: 1000px) {
+    margin: 0px;
+    position: absolute;
+    right: 1px;
+    top: 5px;
+  }
 `;
 export { Form, Mode, Container, Header, Icon, Body, Input, Submit, PhoneInput };
-export { Wrapper, Con, Contacts, Button, NavbarWrapper, NameInput, ErrIcon };
+export {
+  Wrapper,
+  Con,
+  Contacts,
+  Button,
+  NavbarWrapper,
+  NameInput,
+  ErrIcon,
+  MobileContacts,
+};
