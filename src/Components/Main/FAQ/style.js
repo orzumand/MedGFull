@@ -6,6 +6,12 @@ const Wrapper = styled.div`
   padding-top: 164px;
   padding-bottom: 100px;
   background: var(--secondColor);
+  @media (max-width: 1000px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 10px;
+  }
   ${({ mode }) => mode && "background:#323232;"}
 `;
 const Container = styled.div`
@@ -60,11 +66,19 @@ const Item = styled.div`
     ${({ mode }) => mode && "background:#fafafa;"}
   }
   ${({ mode }) => mode && "background:#454545;"}
+  @media (max-width: 760px) {
+    padding: 0px;
+    height: 100px;
+  }
 `;
 
 const Title = styled.div`
   font-weight: 500;
   font-size: 17px;
+  @media (max-width: 760px) {
+    font-size: 12px;
+    width: 400px;
+  }
 `;
 const Icon = styled(Arrow)`
   width: 31px;
@@ -74,6 +88,11 @@ const Icon = styled(Arrow)`
   background: var(--secondColor);
   transition: 0.2s;
   ${({ mode }) => mode && "background:#585858;"}
+  @media (max-width: 760px) {
+    width: 11px;
+    height: 11px;
+    padding: 5px;
+  }
 `;
 const Question = styled.div`
   display: flex;
@@ -90,6 +109,9 @@ const Answer = styled.div`
   font-weight: 500;
   font-size: 15px;
   line-height: 18px;
+  @media (max-width: 760px) {
+    font-size: 12px;
+  }
   ${({ mode }) => mode && "color:white;"}
 `;
 
@@ -111,6 +133,9 @@ const Feedback = styled.div`
   a {
     color: #5f8fff;
     text-decoration: none;
+  }
+  @media (max-width: 760px) {
+    font-size: 10px;
   }
 `;
 export {

@@ -138,14 +138,16 @@ const Button = styled.div`
     width: 28px;
     height: 28px;
   }
-  ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
   @media (max-width: 760px) {
     font-size: 12px;
-    padding: 8px;
+    padding: 8px 14px;
     height: fit-content;
     border-radius: 14px;
     background: #f8f8f8;
+    color: black;
+    ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
   }
+  ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
 `;
 const Form = styled.div`
   background-color: rgba(0, 0, 0, 0.522);
@@ -158,6 +160,7 @@ const Form = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
   @media (max-width: 760px) {
     padding: 0px 5px;
   }
@@ -321,7 +324,7 @@ const Mode = styled.img`
   margin-right: -50px;
   @media (max-width: 1000px) {
     margin: 0px;
-    position: absolute;
+
     right: 1px;
     top: 5px;
   }

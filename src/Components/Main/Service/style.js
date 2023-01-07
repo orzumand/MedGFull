@@ -5,6 +5,12 @@ const Wrapper = styled.div`
   padding: var(--padding);
   background: #f8f8f8;
   height: 443px;
+  @media (max-width: 1000px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 10px;
+  }
   ${({ mode }) => mode && "background: #323232;,color:white;"}
 `;
 const Container = styled.div`
@@ -52,13 +58,14 @@ const Button = styled.div`
 `;
 
 const Card = styled.div`
-  width: 390px;
+  max-width: 390px;
   height: 224px;
   background-color: #ffff;
   border-radius: 12px;
   padding: 26px;
   padding-top: 51px;
   position: relative;
+  margin: auto;
   .title {
     font-family: "Inter";
     font-style: normal;
@@ -84,6 +91,9 @@ const Card = styled.div`
 
     color: #c2b7bd;
     ${({ mode }) => mode && "color:##C2B7BD;"}
+  }
+  @media (max-width: 760px) {
+    width: 360px;
   }
   ${({ mode }) => mode && "background:#454545;"}
 `;

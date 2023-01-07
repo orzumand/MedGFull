@@ -8,11 +8,24 @@ import { Arrows, Card, Carousel, Container, Icon, Wrapper } from "./style";
 const settings = {
   infinite: true,
   centerPadding: "19px",
-
   slidesToScroll: 1,
   slidesToShow: 3,
   speed: 500,
   width: "100%",
+  responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
 
 const Service = () => {
