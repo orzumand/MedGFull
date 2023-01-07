@@ -8,9 +8,12 @@ const Wrapper = styled.div`
   background: #ffeffd;
   height: 570px;
   display: flex;
-  justify-content: center;
+
   @media (max-width: 1000px) {
     padding: 0px 50px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 10px;
   }
   ${({ mode }) => mode && "background: #1D1D1D;"}
 `;
@@ -20,10 +23,20 @@ const Container = styled.div`
   display: flex;
   align-items: center;
   gap: 36px;
+
+  img {
+    @media (max-width: 760px) {
+      position: absolute;
+      z-index: 1;
+    }
+  }
 `;
 const Content = styled.div`
+  z-index: 2;
   margin-top: -35px;
   width: 645px;
+  /* border: 1px solid red; */
+
   .maintitle {
     font-family: "Inter";
     font-style: normal;
@@ -34,8 +47,13 @@ const Content = styled.div`
       font-size: 32px;
       line-height: 38px;
     }
+    @media (max-width: 760px) {
+      font-size: 28px;
+      line-height: 38px;
+    }
     /* Light/black */
     color: #402c36;
+
     ${({ mode }) => mode && "color: #ffffff;"}
   }
   .subtitle {
@@ -54,7 +72,25 @@ const Content = styled.div`
       font-size: 15px;
       line-height: 100%;
     }
+    @media (max-width: 760px) {
+      font-size: 15px;
+      line-height: 100%;
+      color: #402c36;
+      ${({ mode }) => mode && "color: #ffffff;"}
+    }
     ${({ mode }) => mode && "color: ##C2B7BD;"}
+  }
+  @media (max-width: 760px) {
+    background-color: #f8f8f889;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin: 0px;
+    border-radius: 15px;
+    padding-bottom: 5px;
+    margin-bottom: -70px;
+    ${({ mode }) => mode && "background-color: #402c3799;"}
   }
 `;
 const Button = styled.div`

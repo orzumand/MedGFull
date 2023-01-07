@@ -26,17 +26,17 @@ const Wrapper = styled.div`
 `;
 const NavbarWrapper = styled.div`
   padding: var(--padding);
-
+  /* border: 1px solid red; */
   @media (max-width: 1000px) {
     padding: 0px 50px;
   }
   @media (max-width: 760px) {
-    padding: 0px 5px;
+    padding: 0px 10px;
   }
   ${({ mode }) => mode && "background-color: #323232"}
 `;
 const Container = styled.div`
-  width: 100%;
+  margin: auto;
   max-width: 1440px;
   height: 100px;
   display: flex;
@@ -44,7 +44,7 @@ const Container = styled.div`
   justify-content: space-between;
 
   @media (max-width: 760px) {
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
   }
 
@@ -93,7 +93,7 @@ const MobileContacts = styled.div`
     font-family: "Inter";
     font-style: normal;
     font-weight: 600;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 19px;
     text-align: right;
 
@@ -105,7 +105,7 @@ const MobileContacts = styled.div`
     font-family: "Inter";
     font-style: normal;
     font-weight: 400;
-    font-size: 12px;
+    font-size: 14px;
     line-height: 17px;
     /* identical to box height */
 
@@ -158,6 +158,9 @@ const Form = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  @media (max-width: 760px) {
+    padding: 0px 5px;
+  }
 `;
 const Con = styled.div`
   width: 496px;
