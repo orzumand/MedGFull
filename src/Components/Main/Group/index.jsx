@@ -10,6 +10,20 @@ const settings = {
   slidesToShow: 4,
   speed: 500,
   width: "100%",
+  responsive: [
+    {
+      breakpoint: 1000,
+      settings: {
+        slidesToShow: 2,
+      },
+    },
+    {
+      breakpoint: 760,
+      settings: {
+        slidesToShow: 1,
+      },
+    },
+  ],
 };
 const Group = () => {
   const [darkmode] = useContext(DMode);

@@ -5,6 +5,12 @@ const Wrapper = styled.div`
   padding: var(--padding);
   background: #f8f8f8;
   height: 500px;
+  @media (max-width: 1000px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 10px;
+  }
   ${({ mode }) => mode && "background:#323232"}
 `;
 const Container = styled.div`
@@ -52,10 +58,11 @@ const Button = styled.div`
 `;
 
 const Card = styled.div`
-  width: 285px;
+  max-width: 285px;
   height: 299px;
   background-color: #ffff;
   border-radius: 12px;
+  margin: auto;
 
   .title {
     font-family: "Inter";

@@ -30,6 +30,9 @@ const Container = styled.div`
       z-index: 1;
     }
   }
+  @media (max-width: 760px) {
+    justify-content: center;
+  }
 `;
 const Content = styled.div`
   z-index: 2;
@@ -81,16 +84,17 @@ const Content = styled.div`
     ${({ mode }) => mode && "color: ##C2B7BD;"}
   }
   @media (max-width: 760px) {
-    background-color: #f8f8f889;
+    background-color: #ffffffc2;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     margin: 0px;
     border-radius: 15px;
-    padding-bottom: 5px;
-    margin-bottom: -70px;
-    ${({ mode }) => mode && "background-color: #402c3799;"}
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: -100px;
+    ${({ mode }) => mode && "background-color: #402c38e8;"}
   }
 `;
 const Button = styled.div`

@@ -123,6 +123,11 @@ const Navbar = () => {
               <Button mode={mode ? 1 : 0}>
                 <img src={Ru} alt="Logo" /> Русский
               </Button>
+              <Mode
+                className="Mobi"
+                onClick={() => toggleMode()}
+                src={!mode ? Dark : Light}
+              />
             </MobileContacts>
           </Drawer>
 
@@ -152,11 +157,6 @@ const Navbar = () => {
             >
               <img src={Recall} alt="alt" />
             </Button>
-            <Mode
-              className="Mobi"
-              onClick={() => toggleMode()}
-              src={!mode ? Dark : Light}
-            />
           </div>
         </Container>
       </NavbarWrapper>
