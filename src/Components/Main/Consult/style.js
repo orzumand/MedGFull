@@ -9,6 +9,9 @@ const Wrapper = styled.div`
   height: 570px;
   display: flex;
   justify-content: center;
+  @media (max-width: 1000px) {
+    padding: 0px 50px;
+  }
   ${({ mode }) => mode && "background: #1D1D1D;"}
 `;
 const Container = styled.div`
@@ -27,7 +30,10 @@ const Content = styled.div`
     font-weight: 700;
     font-size: 43px;
     line-height: 52px;
-
+    @media (max-width: 1000px) {
+      font-size: 32px;
+      line-height: 38px;
+    }
     /* Light/black */
     color: #402c36;
     ${({ mode }) => mode && "color: #ffffff;"}
@@ -44,6 +50,10 @@ const Content = styled.div`
 
     color: #c2b7bd;
     margin: 38px 0px 24px 0px;
+    @media (max-width: 1000px) {
+      font-size: 15px;
+      line-height: 100%;
+    }
     ${({ mode }) => mode && "color: ##C2B7BD;"}
   }
 `;

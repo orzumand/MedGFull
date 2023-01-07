@@ -4,7 +4,7 @@ export const DMode = createContext();
 const DarkMode = ({ children }) => {
   const darkmode = JSON.parse(localStorage.getItem("mode"));
 
-  const [mode, setMode] = useState(darkmode !== null ? !darkmode : true);
+  const [mode, setMode] = useState(darkmode !== null ? !darkmode : false);
   return <DMode.Provider value={[mode, setMode]}>{children}</DMode.Provider>;
 };
 

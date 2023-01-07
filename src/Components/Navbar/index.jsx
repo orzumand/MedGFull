@@ -16,6 +16,7 @@ import {
   NameInput,
   ErrIcon,
   Mode,
+  MobileContacts,
 } from "./style";
 import Logo from "../../Assets/Img/Logo.svg";
 import Ru from "../../Assets/Icons/ru.svg";
@@ -25,13 +26,24 @@ import Remove from "../../Assets/Icons/remove.png";
 import Dark from "../../Assets/Icons/dark.png";
 import Light from "../../Assets/Icons/light.png";
 import { DMode } from "../../Context/context";
+import { Drawer } from "antd";
+import Menu from "../../Assets/Icons/menu.png";
+import Recall from "../../Assets/Icons/recall.png";
 const Navbar = () => {
   const [toggle, setToggle] = useState(false);
   const [tel, setTel] = useState("");
   const [name, setName] = useState("");
   const [errorname, setErrorname] = useState(true);
   const [errortel, setErrortel] = useState(true);
+  const [open, setOpen] = useState(false);
 
+  const showDrawer = () => {
+    setOpen(true);
+  };
+
+  const onClose = () => {
+    setOpen(false);
+  };
   const onSubmit = () => {
     name === "" ? setErrorname(false) : setErrorname(true);
     tel.length !== 9 ? setErrortel(false) : setErrortel(true);
@@ -93,6 +105,27 @@ const Navbar = () => {
     <Wrapper>
       <NavbarWrapper mode={mode ? 1 : 0}>
         <Container>
+          <Button className="Mobi" onClick={showDrawer}>
+            <img src={Menu} alt="alt" />
+          </Button>
+          <Drawer
+            title="Контакт"
+            placement="left"
+            onClose={onClose}
+            open={open}
+          >
+            <MobileContacts>
+              <div>
+                <div className="title">+998 (97) 123-45-67</div>
+                <div className="subtitle">контактный центр</div>
+              </div>
+
+              <Button mode={mode ? 1 : 0}>
+                <img src={Ru} alt="Logo" /> Русский
+              </Button>
+            </MobileContacts>
+          </Drawer>
+
           <img src={Logo} alt="Logo" />
           <Contacts>
             <div>
@@ -111,6 +144,21 @@ const Navbar = () => {
             </Button>
             <Mode onClick={() => toggleMode()} src={!mode ? Dark : Light} />
           </Contacts>
+          <div>
+            <Button
+              className="Mobi"
+              mode={mode ? 1 : 0}
+              onClick={() => setToggle(true)}
+              type={"first"}
+            >
+              <img src={Recall} alt="alt" />
+            </Button>
+            <Mode
+              className="Mobi"
+              onClick={() => toggleMode()}
+              src={!mode ? Dark : Light}
+            />
+          </div>
         </Container>
       </NavbarWrapper>
       <Outlet />
