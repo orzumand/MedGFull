@@ -144,9 +144,8 @@ const Navbar = () => {
             </Button>
             <Mode onClick={() => toggleMode()} src={!mode ? Dark : Light} />
           </Contacts>
-          <div>
+          <div className="Mobi">
             <Button
-              className="Mobi"
               mode={mode ? 1 : 0}
               onClick={() => setToggle(true)}
               type={"first"}

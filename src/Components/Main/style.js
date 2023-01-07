@@ -11,6 +11,7 @@ const Form = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  z-index: 3;
 `;
 const Container = styled.div`
   width: 496px;
