@@ -30,7 +30,7 @@ import { Drawer } from "antd";
 import Menu from "../../Assets/Icons/menu.png";
 import Recall from "../../Assets/Icons/recall.png";
 const Navbar = () => {
-  const [toggle, setToggle] = useState(false);
+  const [toggle, setToggle] = useState(0);
   const [tel, setTel] = useState("");
   const [name, setName] = useState("");
   const [errorname, setErrorname] = useState(true);
@@ -55,20 +55,20 @@ const Navbar = () => {
     setMode(!mode);
     localStorage.setItem("mode", mode);
   };
-
+  const darkmode = mode ? 1 : 0;
   const form = (
     <Form>
-      <Con mode={mode}>
-        <Header mode={mode}>
+      <Con mode={darkmode}>
+        <Header mode={darkmode}>
           <div>Обратный звонок</div>
-          <Icon mode={mode} onClick={() => setToggle(false)} />
+          <Icon mode={darkmode} onClick={() => setToggle(0)} />
         </Header>
-        <Body mode={mode}>
+        <Body mode={darkmode}>
           <form>
             <div className="subtitle">ФИО</div>
             <NameInput>
               <Input
-                mode={mode}
+                mode={darkmode}
                 onChange={({ target: { value } }) => setName(value)}
                 name="name"
                 type="text"
@@ -78,9 +78,9 @@ const Navbar = () => {
             </NameInput>
             <div className="subtitle">Телефон</div>
             <PhoneInput>
-              <PhoneInput.Code mode={mode}>+998</PhoneInput.Code>
+              <PhoneInput.Code mode={darkmode}>+998</PhoneInput.Code>
               <Input
-                mode={mode}
+                mode={darkmode}
                 name="tel"
                 type="tel"
                 placeholder="(97) 123-45-67"
@@ -103,7 +103,7 @@ const Navbar = () => {
   );
   return (
     <Wrapper>
-      <NavbarWrapper mode={mode ? 1 : 0}>
+      <NavbarWrapper mode={darkmode}>
         <Container>
           <Button className="Mobi" onClick={showDrawer}>
             <img src={Menu} alt="alt" />
@@ -120,7 +120,7 @@ const Navbar = () => {
                 <div className="subtitle">контактный центр</div>
               </div>
 
-              <Button mode={mode ? 1 : 0}>
+              <Button mode={darkmode}>
                 <img src={Ru} alt="Logo" /> Русский
               </Button>
               <Mode
@@ -137,11 +137,11 @@ const Navbar = () => {
               <div className="title">+998 (97) 123-45-67</div>
               <div className="subtitle">контактный центр</div>
             </div>
-            <Button mode={mode ? 1 : 0}>
+            <Button mode={darkmode}>
               <img src={Ru} alt="Logo" /> Русский
             </Button>
             <Button
-              mode={mode ? 1 : 0}
+              mode={darkmode}
               onClick={() => setToggle(true)}
               type={"first"}
             >
@@ -150,11 +150,7 @@ const Navbar = () => {
             <Mode onClick={() => toggleMode()} src={!mode ? Dark : Light} />
           </Contacts>
           <div className="Mobi">
-            <Button
-              mode={mode ? 1 : 0}
-              onClick={() => setToggle(true)}
-              type={"first"}
-            >
+            <Button onClick={() => setToggle(1)} type={"first"}>
               <img src={Recall} alt="alt" />
             </Button>
           </div>
