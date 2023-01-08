@@ -3,14 +3,17 @@ import { ReactComponent as Arrow } from "../../../Assets/Icons/Vector.svg";
 const Wrapper = styled.div`
   width: 100%;
   padding: var(--padding);
-  padding-top: 164px;
   padding-bottom: 100px;
   background: var(--secondColor);
   @media (max-width: 1000px) {
     padding: 0px 50px;
+    padding-top: 30px;
+    padding-bottom: 10px;
   }
   @media (max-width: 760px) {
     padding: 0px 10px;
+    padding-top: 30px;
+    padding-bottom: 20px;
   }
   ${({ mode }) => mode && "background:#323232;"}
 `;
@@ -26,6 +29,9 @@ const Ftitle = styled.div`
   letter-spacing: 0em;
   text-align: left;
   padding-bottom: 8px;
+  @media (max-width: 760px) {
+    font-size: 30px;
+  }
   ${({ mode }) => mode && "color:#ffffff;"}
 `;
 const Subtitle = styled.a`
@@ -40,7 +46,7 @@ const Subtitle = styled.a`
 const Akkardion = styled.div`
   margin-top: 20px;
   .active {
-    height: 162px;
+    height: 185px;
     transition: 0.2s;
     font-weight: 700;
   }
@@ -67,8 +73,7 @@ const Item = styled.div`
   }
   ${({ mode }) => mode && "background:#454545;"}
   @media (max-width: 760px) {
-    padding: 0px;
-    height: 100px;
+    padding: 13px 5px;
   }
 `;
 
@@ -76,23 +81,30 @@ const Title = styled.div`
   font-weight: 500;
   font-size: 17px;
   @media (max-width: 760px) {
+    font-size: 15px;
+  }
+  @media (max-width: 580px) {
     font-size: 12px;
-    width: 400px;
   }
 `;
 const Icon = styled(Arrow)`
   width: 31px;
   height: 31px;
+  min-width: 31px;
+  min-height: 31px;
   padding: 8px;
   border-radius: 50%;
   background: var(--secondColor);
   transition: 0.2s;
-  ${({ mode }) => mode && "background:#585858;"}
   @media (max-width: 760px) {
-    width: 11px;
-    height: 11px;
-    padding: 5px;
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    min-height: 28px;
+    max-height: 28px;
+    max-width: 28px;
   }
+  ${({ mode }) => mode && "background:#585858;"}
 `;
 const Question = styled.div`
   display: flex;
@@ -110,7 +122,7 @@ const Answer = styled.div`
   font-size: 15px;
   line-height: 18px;
   @media (max-width: 760px) {
-    font-size: 12px;
+    font-size: 11px;
   }
   ${({ mode }) => mode && "color:white;"}
 `;

@@ -5,6 +5,13 @@ const Wrapper = styled.div`
   padding: var(--padding);
   height: 313px;
   ${({ mode }) => mode && "background:#1D1D1D;"}
+  @media (max-width: 1400px) {
+    padding: 0px 20px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 10px;
+    height: 200px;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -25,9 +32,14 @@ const Container = styled.div`
     /* identical to box height */
 
     /* Light/black */
-
+    @media (max-width: 760px) {
+      font-size: 30px;
+    }
     color: #402c36;
     ${({ mode }) => mode && "color:#ffffff;"}
+  }
+  @media (max-width: 760px) {
+    padding: 34px 0px;
   }
 `;
 

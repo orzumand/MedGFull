@@ -5,6 +5,12 @@ const Wrapper = styled.div`
   padding: var(--padding);
   background-color: #211b1e;
   height: 176px;
+  @media (max-width: 1000px) {
+    padding: 0px 50px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 10px;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -15,6 +21,10 @@ const Container = styled.div`
   flex-direction: column;
   gap: 52px;
   padding: 34px 0px;
+  @media (max-width: 760px) {
+    padding: 20px 0px;
+    gap: 15px;
+  }
 
   .title {
     font-family: "Inter";
@@ -27,16 +37,26 @@ const Container = styled.div`
     /* Light/black */
 
     color: #402c36;
+    @media (max-width: 760px) {
+      font-size: 30px;
+    }
   }
 `;
 
 const Img = styled.img`
   border-top-left-radius: 12px;
   border-top-right-radius: 12px;
+  @media (max-width: 760px) {
+    width: 110px;
+    margin-bottom: 10px;
+  }
 `;
 const Content = styled.div`
   display: flex;
   justify-content: space-between;
+  @media (max-width: 760px) {
+    flex-direction: column;
+  }
   .title {
     font-family: "Inter";
     font-style: normal;
@@ -55,9 +75,12 @@ const Content = styled.div`
     line-height: 17px;
     /* identical to box height */
 
-    text-align: right;
+    text-align: center;
 
     color: #bcbcbc;
+    @media (max-width: 760px) {
+      font-size: 8px;
+    }
   }
   .div {
     display: flex;
@@ -68,9 +91,14 @@ const Content = styled.div`
     width: 24px;
     height: 24px;
     color: #bcbcbc;
+    @media (max-width: 760px) {
+      width: 20px;
+      height: 20px;
+    }
   }
   .icons {
     display: flex;
+    justify-content: center;
     gap: 24px;
   }
 `;

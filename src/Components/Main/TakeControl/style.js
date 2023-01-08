@@ -5,6 +5,13 @@ const Wrapper = styled.div`
   padding: var(--padding);
   height: 400px;
   ${({ mode }) => mode && "background:#252424;"}
+  @media (max-width: 1400px) {
+    padding: 0px 20px;
+    height: 440px;
+  }
+  @media (max-width: 760px) {
+    padding: 0px 10px;
+  }
 `;
 const Container = styled.div`
   width: 100%;
@@ -15,7 +22,10 @@ const Container = styled.div`
   flex-direction: column;
   gap: 36px;
   padding: 64px 0px;
-
+  @media (max-width: 760px) {
+    padding: 34px 0px;
+    gap: 25px;
+  }
   .title {
     font-family: "Inter";
     font-style: normal;
@@ -25,7 +35,13 @@ const Container = styled.div`
     /* identical to box height */
 
     /* Light/black */
-
+    @media (max-width: 760px) {
+      font-size: 30px;
+    }
+    @media (max-width: 560px) {
+      font-size: 22px;
+      line-height: 25px;
+    }
     color: #402c36;
     ${({ mode }) => mode && "color:#ffffff;"}
   }
@@ -38,10 +54,13 @@ const Img = styled.img`
   transform: translate(-50%, -50%);
   width: 453.1px;
   height: 507px;
+  @media (max-width: 1400px) {
+    display: none;
+  }
 `;
 const Content = styled.div`
   position: relative;
-  width: 754px;
+  max-width: 754px;
   .title {
     font-family: "Inter";
     font-style: normal;
@@ -51,6 +70,12 @@ const Content = styled.div`
 
     color: #000000;
     margin-bottom: 4px;
+    @media (max-width: 760px) {
+      font-size: 14px;
+    }
+    @media (max-width: 560px) {
+      font-size: 13px;
+    }
     ${({ mode }) => mode && "color:#ffffff;"}
   }
   .subtitle {
@@ -62,6 +87,12 @@ const Content = styled.div`
 
     color: #8c8b8b;
     margin-bottom: 16px;
+    @media (max-width: 760px) {
+      font-size: 13px;
+    }
+    @media (max-width: 560px) {
+      font-size: 12px;
+    }
     ${({ mode }) => mode && "color:##8C8B8B;"}
   }
 `;
