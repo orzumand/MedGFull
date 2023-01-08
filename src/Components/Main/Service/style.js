@@ -32,7 +32,9 @@ const Container = styled.div`
     /* identical to box height */
 
     /* Light/black */
-
+    @media (max-width: 760px) {
+      font-size: 35px;
+    }
     color: #402c36;
     ${({ mode }) => mode && "color:white;"}
   }

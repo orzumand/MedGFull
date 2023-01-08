@@ -106,10 +106,14 @@ const Card = styled.div`
   Img {
     height: 120px;
     width: 183px;
+    @media (max-width: 760px) {
+      height: 100px;
+      width: 163px;
+    }
   }
-  :hover {
+  /* :hover {
     box-shadow: -1px 1px 35px 11px rgba(34, 60, 80, 0.2);
-  }
+  } */
   @media (max-width: 1000px) {
     width: 100%;
     min-width: 0px;
