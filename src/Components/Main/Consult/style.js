@@ -28,7 +28,7 @@ const Container = styled.div`
     @media (max-width: 760px) {
       position: absolute;
       z-index: 1;
-      width: 99%;
+      max-width: 99%;
     }
   }
   @media (max-width: 760px) {

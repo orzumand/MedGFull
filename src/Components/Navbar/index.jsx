@@ -123,11 +123,14 @@ const Navbar = () => {
               <Button mode={darkmode}>
                 <img src={Ru} alt="Logo" /> Русский
               </Button>
-              <Mode
+              <Button
+                mode={darkmode}
                 className="Mobi"
                 onClick={() => toggleMode()}
-                src={!mode ? Dark : Light}
-              />
+              >
+                <Mode src={!mode ? Dark : Light} />
+                Тёмный режим
+              </Button>
             </MobileContacts>
           </Drawer>
 

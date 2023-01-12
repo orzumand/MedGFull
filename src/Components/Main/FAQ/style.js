@@ -84,7 +84,7 @@ const Title = styled.div`
     font-size: 15px;
   }
   @media (max-width: 580px) {
-    font-size: 12px;
+    font-size: 13px;
   }
 `;
 const Icon = styled(Arrow)`
@@ -122,7 +122,7 @@ const Answer = styled.div`
   font-size: 15px;
   line-height: 18px;
   @media (max-width: 760px) {
-    font-size: 11px;
+    font-size: 12px;
   }
   ${({ mode }) => mode && "color:white;"}
 `;
