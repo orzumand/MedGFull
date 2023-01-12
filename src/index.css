@@ -15,12 +15,15 @@
 .ant-drawer-content-wrapper {
   width: 200px !important;
 }
-/* .ant-drawer-body {
+.ant-drawer-body {
   background-color: #402c38e8;
 }
 .ant-drawer-header {
   background-color: #402c36;
 }
-.ant-drawer-header-title {
-  color: #ffffff;
-} */
+.ant-drawer-title {
+  color: #ffffff !important;
+}
+.anticon-close * {
+  fill: #ffffff !important;
+}
