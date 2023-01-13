@@ -1,4 +1,5 @@
 import React, { useContext, useRef } from "react";
+import { useTranslation } from "react-i18next";
 import Slider from "react-slick";
 import Icon1 from "../../../Assets/Icons/Service1.svg";
 import Icon2 from "../../../Assets/Icons/Service2.svg";
@@ -27,15 +28,15 @@ const settings = {
     },
   ],
 };
-
 const Service = () => {
+  const { t } = useTranslation();
   const slider = useRef();
   const [darkmode] = useContext(DMode);
   const mode = darkmode ? 1 : 0;
   return (
     <Wrapper mode={mode}>
       <Container mode={mode}>
-        <div className={"title"}>Услуги</div>
+        <div className={"title"}>{t("services")}</div>
         <Carousel>
           <Arrows.Left mode={mode} onClick={() => slider.current.slickNext()} />
           <Slider className="slider" ref={slider} {...settings}>

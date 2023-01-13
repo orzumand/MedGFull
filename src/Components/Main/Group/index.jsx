@@ -3,6 +3,7 @@ import Slider from "react-slick";
 import { Arrows, Card, Carousel, Container, Img, Wrapper } from "./style";
 import User from "../../../Assets/Img/User1.svg";
 import { DMode } from "../../../Context/context";
+import { useTranslation } from "react-i18next";
 const settings = {
   infinite: true,
   centerPadding: "19px",
@@ -29,10 +30,11 @@ const Group = () => {
   const [darkmode] = useContext(DMode);
   const mode = darkmode ? 1 : 0;
   const slider = useRef();
+  const { t } = useTranslation();
   return (
     <Wrapper mode={mode}>
       <Container mode={mode}>
-        <div className={"title"}>Наша команда</div>
+        <div className={"title"}>{t("team")}</div>
         <Carousel>
           <Arrows.Left mode={mode} onClick={() => slider.current.slickNext()} />
           <Slider className="slider" ref={slider} {...settings}>

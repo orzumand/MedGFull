@@ -1,4 +1,5 @@
 import React, { useContext, useState } from "react";
+import Select from "../../Generik/Select";
 import {
   Body,
   Button,
@@ -19,7 +20,6 @@ import {
   MobileContacts,
 } from "./style";
 import Logo from "../../Assets/Img/Logo.svg";
-import Ru from "../../Assets/Icons/ru.svg";
 import { Outlet } from "react-router-dom";
 import Footer from "../Footer";
 import Remove from "../../Assets/Icons/remove.png";
@@ -29,6 +29,8 @@ import { DMode } from "../../Context/context";
 import { Drawer } from "antd";
 import Menu from "../../Assets/Icons/menu.png";
 import Recall from "../../Assets/Icons/recall.png";
+import { useTranslation } from "react-i18next";
+
 const Navbar = () => {
   const [toggle, setToggle] = useState(0);
   const [tel, setTel] = useState("");
@@ -36,6 +38,8 @@ const Navbar = () => {
   const [errorname, setErrorname] = useState(true);
   const [errortel, setErrortel] = useState(true);
   const [open, setOpen] = useState(false);
+
+  const { t } = useTranslation();
 
   const showDrawer = () => {
     setOpen(true);
@@ -117,20 +121,18 @@ const Navbar = () => {
             <MobileContacts>
               <div>
                 <div className="title">+998 (97) 123-45-67</div>
-                <div className="subtitle">контактный центр</div>
+                <div className="subtitle">{"callCenter"}</div>
               </div>
 
-              <Button mode={darkmode}>
-                <img src={Ru} alt="Logo" /> Русский
-              </Button>
               <Button
                 mode={darkmode}
                 className="Mobi"
                 onClick={() => toggleMode()}
               >
                 <Mode src={!mode ? Dark : Light} />
-                Тёмный режим
+                {t("darkMode")}
               </Button>
+              <Select />
             </MobileContacts>
           </Drawer>
 
@@ -138,18 +140,17 @@ const Navbar = () => {
           <Contacts>
             <div>
               <div className="title">+998 (97) 123-45-67</div>
-              <div className="subtitle">контактный центр</div>
+              <div className="subtitle">{t("callCenter")}</div>
             </div>
-            <Button mode={darkmode}>
-              <img src={Ru} alt="Logo" /> Русский
-            </Button>
+            <Select />
             <Button
               mode={darkmode}
               onClick={() => setToggle(true)}
               type={"first"}
             >
-              Обратный звонок
+              {t("backcall")}
             </Button>
+
             <Mode onClick={() => toggleMode()} src={!mode ? Dark : Light} />
           </Contacts>
           <div className="Mobi">

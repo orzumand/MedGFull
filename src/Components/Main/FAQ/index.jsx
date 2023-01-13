@@ -14,9 +14,10 @@ import {
   Wrapper,
 } from "./style";
 import { DMode } from "../../../Context/context";
+import { useTranslation } from "react-i18next";
 const FAQ = () => {
   const [btnState, setBtnState] = useState("");
-
+  const { t } = useTranslation();
   const handleClick = (num) => {
     setBtnState(num);
   };
@@ -26,7 +27,7 @@ const FAQ = () => {
     <Wrapper mode={mode}>
       <Container>
         <Ftitle mode={mode}>FAQ</Ftitle>
-        <Subtitle>Нужны ответы? Найдите их здесь...</Subtitle>
+        <Subtitle>{t("answers")}</Subtitle>
         <Akkardion>
           <Item
             className={btnState === 1 ? "active" : ""}
@@ -122,7 +123,7 @@ const FAQ = () => {
           </Item>
         </Akkardion>
         <Feedback>
-          Не смогли найти то, что искали? Напишите нам на
+          {t("couldNotFind")}
           <a href="/"> medghelp@gmail.com</a>
         </Feedback>
       </Container>

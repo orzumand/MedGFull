@@ -2,14 +2,16 @@ import React, { useContext } from "react";
 import { Container, Content, Img, Wrapper } from "./style";
 import Phone from "../../../Assets/Img/Phone.svg";
 import { DMode } from "../../../Context/context";
+import { useTranslation } from "react-i18next";
 
 const TakeControl = () => {
   const [darkmode] = useContext(DMode);
   const mode = darkmode ? 1 : 0;
+  const { t } = useTranslation();
   return (
     <Wrapper mode={mode}>
       <Container mode={mode}>
-        <div className="title">Возьмите под контроль свое здоровье</div>
+        <div className="title">{t("takeControl")}</div>
         <Content mode={mode}>
           <div className="title">Быстрый и осторожный опыт</div>
           <div className="subtitle">

@@ -126,6 +126,40 @@ const Button = styled.div`
   -khtml-user-select: none;
   user-select: none;
   align-items: center;
+  justify-content: center;
+  width: 155px;
+  white-space: nowrap;
+  height: 47px;
+  gap: 8px;
+  ${getType}
+  cursor: pointer;
+  :active {
+    transform: scale(0.98);
+  }
+  img {
+    width: 28px;
+    height: 28px;
+  }
+  @media (max-width: 760px) {
+    font-size: 12px;
+    padding: 8px 14px;
+    height: fit-content;
+    border-radius: 14px;
+    background: #f8f8f8;
+    color: black;
+    ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
+  }
+  ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
+`;
+const Select = styled.select`
+  border-radius: 14px;
+  font-weight: 500;
+  font-size: 15px;
+  display: flex;
+  -moz-user-select: none;
+  -khtml-user-select: none;
+  user-select: none;
+  align-items: center;
 
   height: 47px;
   gap: 8px;
@@ -149,6 +183,8 @@ const Button = styled.div`
   }
   ${({ mode }) => mode && "background-color:#1D1D1D; color:white;"}
 `;
+
+const Option = styled.option``;
 const Form = styled.div`
   background-color: rgba(0, 0, 0, 0.522);
   top: 0;
@@ -329,7 +365,6 @@ const Mode = styled.img`
     top: 5px;
   }
 `;
-export { Form, Mode, Container, Header, Icon, Body, Input, Submit, PhoneInput };
 export {
   Wrapper,
   Con,
@@ -339,4 +374,15 @@ export {
   NameInput,
   ErrIcon,
   MobileContacts,
+  Form,
+  Mode,
+  Container,
+  Header,
+  Icon,
+  Body,
+  Input,
+  Submit,
+  PhoneInput,
+  Select,
+  Option,
 };
