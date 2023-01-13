@@ -51,9 +51,7 @@ const Left = styled.div`
   max-width: 590px;
   border-radius: 24px;
   cursor: pointer;
-  :hover {
-    box-shadow: -1px 1px 35px 11px rgba(34, 60, 80, 0.2);
-  }
+
   Img {
     height: 383px;
     width: 100%;

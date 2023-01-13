@@ -11,13 +11,15 @@ import {
 } from "./style";
 import { DMode } from "../../../Context/context";
 import Blogs from "../../../Assets/Img/Blog.jpg";
+import { useTranslation } from "react-i18next";
 const Blog = () => {
   const [darkmode] = useContext(DMode);
   const mode = darkmode ? 1 : 0;
+  const { t } = useTranslation();
   return (
     <Wrapper mode={mode}>
       <Container mode={mode}>
-        <div className="title">Блог о здоровье</div>
+        <div className="title">{t("blog")}</div>
         <Content>
           <Left mode={mode}>
             <Img src={Blogs} />

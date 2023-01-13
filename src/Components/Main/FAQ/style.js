@@ -4,6 +4,7 @@ const Wrapper = styled.div`
   width: 100%;
   padding: var(--padding);
   padding-bottom: 100px;
+  padding-top: 100px;
   background: var(--secondColor);
   @media (max-width: 1000px) {
     padding: 0px 50px;
