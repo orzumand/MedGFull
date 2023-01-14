@@ -10,5 +10,11 @@
   "couldNotFind": "Couldn't find what you were looking for? Write to us at",
   "rights": "© All rights reserved 2022. MedG Private Medical Center",
   "answers": "Need answers? Find them here...",
-  "darkMode": "Dark mode"
+  "darkMode": "Dark mode",
+  "disable": "Fields required",
+  "confirm": "Confirm",
+  "fullName": "Full name",
+  "phone": "Phone",
+  "date": "Date",
+  "time": "Time"
 }

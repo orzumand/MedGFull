@@ -60,16 +60,21 @@ const Navbar = () => {
     localStorage.setItem("mode", mode);
   };
   const darkmode = mode ? 1 : 0;
+  const toggleClose = () => {
+    setToggle(0);
+    setName("");
+    setTel("");
+  };
   const form = (
     <Form>
       <Con mode={darkmode}>
         <Header mode={darkmode}>
-          <div>Обратный звонок</div>
-          <Icon mode={darkmode} onClick={() => setToggle(0)} />
+          <div>{t("backcall")}</div>
+          <Icon mode={darkmode} onClick={() => toggleClose()} />
         </Header>
         <Body mode={darkmode}>
           <form>
-            <div className="subtitle">ФИО</div>
+            <div className="subtitle">{t("fullName")}</div>
             <NameInput>
               <Input
                 mode={darkmode}
@@ -77,10 +82,11 @@ const Navbar = () => {
                 name="name"
                 type="text"
                 placeholder="Умид Мухторов"
+                value={name}
               />
               {!errorname ? <ErrIcon src={Remove} /> : ""}
             </NameInput>
-            <div className="subtitle">Телефон</div>
+            <div className="subtitle">{t("phone")}</div>
             <PhoneInput>
               <PhoneInput.Code mode={darkmode}>+998</PhoneInput.Code>
               <Input
@@ -96,9 +102,7 @@ const Navbar = () => {
               onClick={onSubmit}
               className={name !== "" && tel.length === 9 ? "" : "disable"}
             >
-              {name !== "" && tel.length === 9
-                ? " Подтвердить"
-                : "Необходимо заполнить поля"}
+              {name !== "" && tel.length === 9 ? t("confirm") : t("disable")}
             </Submit>
           </form>
         </Body>

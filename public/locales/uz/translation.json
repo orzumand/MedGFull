@@ -10,5 +10,11 @@
   "couldNotFind": "Izlagan narsangizni topa olmadingizmi? Bizga yozing",
   "rights": "© Barcha huquqlar himoyalangan 2022. MedG xususiy tibbiyot markazi",
   "answers": "Javoblar kerakmi? Ularni shu yerda toping...",
-  "darkMode": "Tungi rejim"
+  "darkMode": "Tungi rejim",
+  "disable": "Ma'lumotni to'ldiring",
+  "confirm": "Tasdiqlash",
+  "fullName": "F.I.O.",
+  "phone": "Telefon",
+  "date": "San'a",
+  "time": "Vaqt"
 }
