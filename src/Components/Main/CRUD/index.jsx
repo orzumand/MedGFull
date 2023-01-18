@@ -36,7 +36,7 @@ const CRUD = () => {
       setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getUsers();
-  }, []);
+  }, [usersCollectionRef]);
 
   return (
     <Container>
