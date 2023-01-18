@@ -36,8 +36,7 @@ const CRUD = () => {
       setUsers(data.docs.map((doc) => ({ ...doc.data(), id: doc.id })));
     };
     getUsers();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, []);
+  }, [usersCollectionRef]);
 
   return (
     <Container>
