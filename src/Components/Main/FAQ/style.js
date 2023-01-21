@@ -73,6 +73,10 @@ const Item = styled.div`
     ${({ mode }) => mode && "background:#fafafa;"}
   }
   ${({ mode }) => mode && "background:#454545;"}
+  @media (max-width: 1000px) {
+    padding: 10px 18px;
+    height: 56px;
+  }
   @media (max-width: 760px) {
     padding: 13px 5px;
   }
@@ -113,6 +117,7 @@ const Question = styled.div`
   width: 100%;
   align-items: center;
   position: relative;
+  margin-bottom: 5px;
   ${({ mode }) => mode && "color:white;"}
 `;
 

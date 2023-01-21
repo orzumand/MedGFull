@@ -9,7 +9,7 @@ import TakeControl from "./TakeControl";
 import { Body, Container, Form, Header, Icon, Input, Submit } from "./style";
 import { DMode } from "../../Context/context";
 import { useTranslation } from "react-i18next";
-import CRUD from "./CRUD";
+// import CRUD from "./CRUD";
 const Main = () => {
   const [toggle, setToggle] = useState(false);
   const handleToggle = () => {
@@ -20,7 +20,7 @@ const Main = () => {
   const { t } = useTranslation();
   return (
     <div>
-      <CRUD />
+      {/* <CRUD /> */}
       <Consult handleToggle={handleToggle} />
       <Service />
       <Blog />
