@@ -13,7 +13,13 @@ const settings = {
   width: "100%",
   responsive: [
     {
-      breakpoint: 1000,
+      breakpoint: 1390,
+      settings: {
+        slidesToShow: 3,
+      },
+    },
+    {
+      breakpoint: 1088,
       settings: {
         slidesToShow: 2,
       },

@@ -5,6 +5,7 @@ const Wrapper = styled.div`
   padding: var(--padding);
   background: #f8f8f8;
   height: 443px;
+
   @media (max-width: 1000px) {
     padding: 0px 50px;
   }
@@ -74,7 +75,7 @@ const Card = styled.div`
     font-weight: 600;
     font-size: 21px;
     line-height: 25px;
-    width: 326px;
+    max-width: 326px;
     /* Light/black */
 
     color: #402c36;

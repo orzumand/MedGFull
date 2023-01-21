@@ -27,8 +27,8 @@ import Dark from "../../Assets/Icons/dark.png";
 import Light from "../../Assets/Icons/light.png";
 import { DMode } from "../../Context/context";
 import { Drawer } from "antd";
-import Menu from "../../Assets/Icons/menu.png";
-import Recall from "../../Assets/Icons/recall.png";
+import Menu from "../../Assets/Icons/menu.svg";
+import Recall from "../../Assets/Icons/recall.svg";
 import { useTranslation } from "react-i18next";
 
 const Navbar = () => {
@@ -157,11 +157,10 @@ const Navbar = () => {
 
             <Mode onClick={() => toggleMode()} src={!mode ? Dark : Light} />
           </Contacts>
-          <div className="Mobi">
-            <Button onClick={() => setToggle(1)} type={"first"}>
-              <img src={Recall} alt="alt" />
-            </Button>
-          </div>
+
+          <Button className="Mobi" onClick={() => setToggle(1)}>
+            <img src={Recall} alt="alt" />
+          </Button>
         </Container>
       </NavbarWrapper>
       <Outlet />

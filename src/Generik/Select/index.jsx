@@ -31,7 +31,10 @@ const Select = () => {
       <Body className={open ? "" : "body"} mode={mode}>
         {Item.map((value, index) => {
           return (
-            <Option onClick={() => changeLanguage(value.lng, index)}>
+            <Option
+              key={index}
+              onClick={() => changeLanguage(value.lng, index)}
+            >
               <img src={value.img} alt="img" />
               {value.name}
             </Option>
